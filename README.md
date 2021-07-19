@@ -9,8 +9,8 @@ TBC...
   
 # Functions
 
-- [CreateEvent.java](src/main/java/org/example/functions/CreateEvent.js) creates messages and publishes them to topic using a timer trigger
-- [TopicTrigger.java](src/main/java/org/example/functions/TopicTrigger.js) consumes the messages as produced by the CreateEvent function
+- [CreateEvent.java](src/main/java/org/example/functions/CreateEvent.java) creates messages and publishes them to topic using a timer trigger
+- [TopicTrigger.java](src/main/java/org/example/functions/TopicTrigger.java) consumes the messages as produced by the CreateEvent function
 
 # References
 
