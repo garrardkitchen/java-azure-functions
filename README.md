@@ -5,8 +5,13 @@ TBC...
 - install windows dependencies:
   - choco install gradle -version 7.1
   - choco install javaruntime
-  - choco install openjdk11jre -version 11.0.11.9
+  - choco install openjdk11jre
   
+# Functions
+
+- [CreateEvent.java](src/main/java/org/example/functions/CreateEvent.js) creates messages and publishes them to topic using a timer trigger
+- [TopicTrigger.java](src/main/java/org/example/functions/TopicTrigger.js) consumes the messages as produced by the CreateEvent function
+
 # References
 
 - https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-maven-intellij
