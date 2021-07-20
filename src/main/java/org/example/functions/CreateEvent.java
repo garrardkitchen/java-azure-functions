@@ -43,6 +43,11 @@ public class CreateEvent {
                 return;
             }
 
+            int maxMsg = 5;
+            if (null != System.getenv("EVENTGRID_GEN_MESSAGE") ) {
+                maxMsg = Integer.parseInt(System.getenv("EVENTGRID_GEN_MESSAGE"));
+            }
+
             // Create an event grid client.
             TopicCredentials topicCredentials = new TopicCredentials(System.getenv("EVENTGRID_TOPIC_KEY"));
             EventGridClient client = new EventGridClientImpl(topicCredentials);
@@ -50,7 +55,7 @@ public class CreateEvent {
             // Publish custom events to the EventGrid.
             System.out.println("Publish custom events to the EventGrid");
             List<EventGridEvent> eventsList = new ArrayList<>();
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < maxMsg; i++) {
                 eventsList.add(new EventGridEvent(
                         UUID.randomUUID().toString(),
                         String.format("Door%d", i),
